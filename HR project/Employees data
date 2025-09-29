@@ -1,1 +1,10 @@
+USE sql_HR;
+SELECT*
+FROM employees
+WHERE office_id IN (1,10)
 
+USE sql_HR;
+SELECT*
+FROM employees e
+JOIN employees m
+ON e.reports_to=m.employee_id
