@@ -6,5 +6,23 @@ WHERE office_id IN (1,10)
 USE sql_HR;
 SELECT*
 FROM employees e
+ORDER BY salary ASC
+
+USE sql_HR;
+SELECT*
+FROM employees e
+WHERE salary >= 40000
+
+USE sql_HR;
+SELECT e.first_name,e.last_name,
+e.job_title,e.salary,e.office_id,O.address,O.city
+FROM employees e
+JOIN offices O
+USING (office_id)
+
+
+USE sql_HR;
+SELECT*
+FROM employees e
 JOIN employees m
 ON e.reports_to=m.employee_id
