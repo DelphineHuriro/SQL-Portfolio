@@ -26,3 +26,7 @@ WHERE charges=(
 
 SELECT MIN(charges)
 FROM insurance)
+
+
+SELECT(MIN(charges)/ MAX(charges))*100 AS min_to_max_percentage
+FROM insurance
