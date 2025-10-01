@@ -13,3 +13,9 @@ AND
 smoker ='yes'
 ORDER BY age ASC
 
+SELECT *
+FROM insurance
+WHERE charges=(
+
+SELECT MAX(charges)
+FROM insurance)
