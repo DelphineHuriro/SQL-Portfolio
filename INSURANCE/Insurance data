@@ -19,3 +19,10 @@ WHERE charges=(
 
 SELECT MAX(charges)
 FROM insurance)
+
+SELECT *
+FROM insurance
+WHERE charges=(
+
+SELECT MIN(charges)
+FROM insurance)
