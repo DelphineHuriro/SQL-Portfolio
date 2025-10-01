@@ -1,1 +1,15 @@
+SELECT *
+FROM insurance
+WHERE charges>
+(
+ SELECT AVG(charges)
+ FROM insurance)
+ORDER BY age
+
+SELECT *
+FROM insurance
+WHERE bmi>25
+AND
+smoker ='yes'
+ORDER BY age ASC
 
