@@ -1,3 +1,5 @@
 #Insurance data 
 *Insurance data used for this project is available at (https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset)
-*an average insurance was found to be '13270.422' and we can easily find that people paying more than average are mainly older people, smokers and people with high body mass index. 
+*an average insurance was found to be '13270.422' and we can easily find that people paying more than average are mainly older people, smokers and people with high body mass index.
+*High paying customer was found to be a 54 years old female with obesity i.e bmi of 47.41 and a smoker paying '63770.42801'.
+*
