@@ -1,1 +1,28 @@
+Use Retail;
+SELECT * 
+FROM retail_sales_dataset
+ORDER BY Date ASC
 
+SELECT 
+    `Gender`,
+    SUM(`Total Amount`) AS TotalAmount
+FROM retail_sales_dataset
+WHERE `Gender` IN ('Male', 'Female')
+GROUP BY `Gender`;
+
+SELECT 
+   `Product Category`,
+    SUM(`Total Amount`) AS TotalAmount
+FROM retail_sales_dataset
+GROUP BY `Product Category`;
+
+SELECT 
+   `Product Category`,`Gender`,
+    SUM(`Total Amount`) AS TotalAmount
+FROM retail_sales_dataset
+GROUP BY `Product Category`,`Gender`;
+
+SELECT `Customer ID`,COUNT(`Transaction ID`)
+FROM retail_sales_dataset
+WHERE Date < '2024-01-01'
+GROUP BY `Customer ID`
