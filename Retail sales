@@ -26,3 +26,31 @@ SELECT `Customer ID`,COUNT(`Transaction ID`)
 FROM retail_sales_dataset
 WHERE Date < '2024-01-01'
 GROUP BY `Customer ID`
+
+SELECT *
+FROM retail_sales_dataset
+WHERE `Customer ID` LIKE '%9'
+
+SELECT *
+FROM retail_sales_dataset
+WHERE `Customer ID` LIKE '______9'
+
+SELECT *
+FROM retail_sales_dataset
+WHERE `Date` <'2023-01-05'
+ORDER BY `Date` ASC
+
+SELECT `Product category`,sum(`Total amount`)
+FROM retail_sales_dataset
+WHERE `Date` <'2024-01-01'
+GROUP BY `Product Category`
+
+SELECT Year(`Date`),Month(`Date`), SUM(`Total Amount`)
+FROM retail_sales_dataset
+GROUP BY Year(`Date`),Month(`Date`)
+ORDER BY Year(`Date`),Month(`Date`)
+
+SELECT Year(`Date`),Month(`Date`),`Product Category`, SUM(`Total Amount`)
+FROM retail_sales_dataset
+GROUP BY Year(`Date`),Month(`Date`) , `Product Category`
+ORDER BY Year(`Date`),Month(`Date`),`Product Category`
