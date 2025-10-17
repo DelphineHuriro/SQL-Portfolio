@@ -45,6 +45,13 @@ FROM retail_sales_dataset
 WHERE `Date` <'2024-01-01'
 GROUP BY `Product Category`
 
+SELECT 
+   `Product Category`,`Gender`,
+    SUM(`Total Amount`) AS TotalAmount
+FROM retail_sales_dataset
+GROUP BY `Product Category`,`Gender`
+HAVING  SUM(`Total Amount`)> 50000
+
 SELECT Year(`Date`),Month(`Date`), SUM(`Total Amount`)
 FROM retail_sales_dataset
 GROUP BY Year(`Date`),Month(`Date`)
